@@ -1,61 +1,63 @@
 #include<cs50.h>
 #include<stdio.h>
 
-int get_height(void);
-void print_spaces(int count);
-void print_hashes(int count);
-void print_pyramids_row(int spaces, int hashes);
-void print_double_pyramide(int height);
+int get_piramide_row(void);
+void print_spaces(int spaces);
+void print_hashes(int hashes);
+void print_piramide_row(int spaces, int hashes);
+void print_piramide(int height);
+
+
 
 
 int main(void)
 {
-    int height= get_height();
+    int height = get_piramide_row();
+    print_piramide(height);
 
-    print_double_pyramide(height);
 }
 
-
-int get_height(void)
+int get_piramide_row (void)
 {
-   int height = get_int("Qual a sua altura desejada?");
 
-   return height;
+    int height = get_int("Qual a altura da sua piramide?");
+
+    return height;
 }
-
-void print_spaces(int count)
+void print_spaces(int spaces)
 {
-    for( int a = 0 ; a < count ; a++ )
+    for(int a = 0; a < spaces; a++)
     {
         printf(" ");
     }
 }
-
-void print_hashes(int count)
+void print_hashes(int hashes)
 {
-    for(int a = 0; a < count ; a++)
+    for(int a = 0; a < hashes; a++)
     {
         printf("#");
-
     }
-
 }
-void print_pyramide_row(int spaces, int hashes)
+
+void print_piramide_row(int spaces, int hashes)
 {
     print_spaces(spaces);
     print_hashes(hashes);
     printf("  ");
     print_hashes(hashes);
     printf("\n");
+
+
 }
 
-void print_double_pyramide(int height)
+void print_piramide(int height)
 {
-    for(int row = 1; row <= height; row++)
+    for(int row = 1; row <= height;row++)
     {
-        int spaces = height - row;
         int hashes = row;
+        int spaces = height - row ;
 
-        print_pyramide_row(spaces, hashes);
+         print_piramide_row(spaces,hashes);
     }
+
 }
