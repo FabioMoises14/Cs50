@@ -44,7 +44,6 @@ int main(void)
 }
 
 
-
 //Calculo para UM JOGADOR
 int calculo(string jogador)
 {
