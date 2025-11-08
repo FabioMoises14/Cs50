@@ -23,18 +23,15 @@ int main(void)
     if(ponto1 == -1 && ponto2 == -1)
     {
         printf("Apenas uma palavra por vez, por favor");
-
         return 2;
     }
     //condicionais para verificar quem venceu
     if(ponto1 > ponto2 )
     {
         printf("Jogador 1 ganhou\n");
-
     }
     else if(ponto2 > ponto1)
     {
-
         printf("Jogador 2 ganhou\n");
     }
     else
@@ -42,8 +39,6 @@ int main(void)
         printf("Empate\n");
     }
 }
-
-
 
 //Calculo para UM JOGADOR
 int calculo(string jogador)
@@ -55,7 +50,6 @@ int calculo(string jogador)
         //Se houver espaço quer dizer que são mais de 1 palavra, retornar -1 = erro.
         if(jogador[i] == ' ')
         {
-
             return -1;
         }
         //Deixar todas letras em minusculo, para realizar o calculo
